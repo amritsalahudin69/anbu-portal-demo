@@ -18,7 +18,7 @@ const infoCards = [
     kicker: 'Gerbang Awal',
     title: 'Kriteria calon anggota bayangan',
     summary:
-      'Interpretasi FE dari panel kiri poster: loyal, sehat, disiplin, memiliki dasar kemampuan tempur, dan sanggup bekerja tanpa sorotan.',
+      'loyal, sehat, disiplin, memiliki dasar kemampuan tempur, dan sanggup bekerja tanpa sorotan.',
     details: [
       'Warga desa resmi dan setia kepada negara.',
       'Usia minimal 16 tahun.',
@@ -68,7 +68,6 @@ const infoCards = [
       'Nada panel kanan bawah poster diterjemahkan menjadi area warning yang keras, singkat, dan sangat kontras.',
     details: [
       'Kegagalan pada salah satu tahap dapat menggugurkan proses.',
-      'Portal ini hanya demo visual untuk presentasi FE.',
       'Semua tombol hanya memunculkan modal, tanpa link keluar.',
       'Data yang Anda isi hanya hidup di browser selama sesi berjalan.',
     ],
@@ -324,8 +323,24 @@ export default function App() {
       </main>
 
       <footer className="footer-bar">
-        <p>ANBU Portal ini di buat oleh mas AmriTSalahudin hanya untuk keperluan senang senang,mohon jangan baper!</p>
-        <button type="button" className="nav-btn" onClick={() => setIsRegisterOpen(true)}>
+        <p>
+          ANBU Portal ini dibuat oleh{" "}
+          <a
+            href="https://github.com/amritsalahudin69/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#ff4d4f", textDecoration: "none", fontWeight: "bold" }}
+          >
+            AmriTSalahudin
+          </a>{" "}
+          hanya untuk keperluan senang-senang, mohon jangan baper!
+        </p>
+
+        <button
+          type="button"
+          className="nav-btn"
+          onClick={() => setIsRegisterOpen(true)}
+        >
           Simulasi Pendaftaran
         </button>
       </footer>
