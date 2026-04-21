@@ -32,7 +32,7 @@ const infoCards = [
     id: 'berkas',
     label: 'Berkas Pendaftaran',
     kicker: 'Verifikasi Awal',
-    title: 'Dokumen dummy yang ditampilkan ke calon pendaftar',
+    title: 'Dokumen yang ditampilkan ke calon pendaftar',
     summary:
       'Seluruh isi hanya simulasi UI. Tidak ada upload sungguhan, tidak ada penyimpanan server, dan tidak ada integrasi database.',
     details: [
@@ -158,7 +158,7 @@ function SubmissionModalContent({ data }) {
       <div className="success-banner">
         <span className="success-dot" />
         <div>
-          <strong>Pendaftaran dummy berhasil diproses</strong>
+          <strong>Pendaftaran berhasil diproses</strong>
           <p>
             Kandidat <b>{data.nama || '-'}</b> telah tercatat pada sisi antarmuka demo ini. Tidak ada pengiriman ke backend.
           </p>
@@ -238,9 +238,9 @@ export default function App() {
           <div className="hero-copy">
             <p className="eyebrow eyebrow--red">PENERIMAAN ANGGOTA KHUSUS</p>
             <h2>ANBU</h2>
-            <p className="hero-subtitle">Portal informasi pendaftaran iseng dengan treatment visual yang dipaksa sedekat mungkin ke poster referensi.</p>
+            {/* <p className="hero-subtitle">Portal informasi pendaftaran iseng dengan treatment visual yang dipaksa sedekat mungkin ke poster referensi.</p> */}
             <p className="hero-note">
-              Di balik bayangan, kami ada. Di luar cahaya, kami bekerja. Semua interaksi pada demo ini bersifat dummy, termasuk formulir, validasi, dan rekap hasil.
+              Di balik bayangan, kami ada. Di luar cahaya, kami bekerja.
             </p>
 
             <div className="cta-group">
@@ -252,7 +252,7 @@ export default function App() {
               </button>
             </div>
 
-            <div className="poster-notes-card">
+            {/* <div className="poster-notes-card">
               <div className="section-title-row">
                 <span className="section-title-mark" />
                 <h3>Turunan detail dari konsep gambar</h3>
@@ -265,7 +265,7 @@ export default function App() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="hero-visual-frame">
@@ -300,7 +300,7 @@ export default function App() {
             <blockquote>
               Kekuatan sejati bukanlah diakui semua orang, tetapi menyelesaikan apa yang tidak bisa diselesaikan orang lain.
             </blockquote>
-            <p>— ANBU / versi dummy landing page</p>
+            <p>— ANBU </p>
             <button type="button" className="panel-btn" onClick={() => openInfo(infoCards[3])}>
               Baca Peringatan
             </button>
@@ -356,7 +356,7 @@ export default function App() {
 
       <Modal
         open={isRegisterOpen}
-        title="Formulir Pendaftaran Dummy"
+        title="Formulir Pendaftaran"
         subtitle="Seluruh input hanya dibaca di sisi frontend, tanpa storage permanen."
         onClose={() => setIsRegisterOpen(false)}
         wide
@@ -406,7 +406,7 @@ export default function App() {
 
             <label className="form-span-2">
               <span>Kontak Rahasia</span>
-              <input name="kontak" value={form.kontak} onChange={handleChange} placeholder="Email / kode komunikasi / nomor dummy" required />
+              <input name="kontak" value={form.kontak} onChange={handleChange} placeholder="Email / kode komunikasi" required />
             </label>
 
             <label className="form-span-2">
